@@ -40,8 +40,14 @@ test:
 about:
   home: https://github.com/sergey-dryabzhinsky/python-zstd
   summary: ZSTD Bindings for Python
+  description: |
+    Zstd, short for Zstandard, is a new lossless compression algorithm,
+    which provides both good compression ratio and speed for your standard compression needs.
   license: BSD-2-Clause
   license_file: LICENSE
+  license_family: BSD
+  dev_url: https://github.com/sergey-dryabzhinsky/python-zstd
+  doc_url: https://github.com/sergey-dryabzhinsky/python-zstd
 
 extra:
   recipe-maintainers:
