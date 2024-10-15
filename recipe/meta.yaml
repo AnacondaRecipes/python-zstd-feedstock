@@ -10,22 +10,22 @@ source:
   sha256: 1ef980abf0e1e072b028d2d76ef95b476632651c96225cf30b619c6eef625672
 
 build:
-  number: 2
+  number: 0
   script:
     - export ZSTD_EXTERNAL=1  # [not win]
     - set ZSTD_EXTERNAL=1  # [win]
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  
+
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
     - pkg-config
   host:
     - python
     - setuptools
     - pip
     - zstd
+    - wheel
   run:
     - python
 
