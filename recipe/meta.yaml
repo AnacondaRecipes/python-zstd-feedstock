@@ -9,7 +9,7 @@ source:
   url: https://pypi.org/packages/source/{{ name.split('-')[1][0] }}/{{ name.split('-')[1] }}/{{ name.split('-')[1] }}-{{ version }}.tar.gz
   sha256: 6d8684c69009be49e1b18ec251a5eb0d7e24f93624990a8a124a1da66a92fc8a
   patches:  # [win]
-    - win.patch  # [win]
+    - patches/win.patch  # [win]
 
 build:
   number: 0
