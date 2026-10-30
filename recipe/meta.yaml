@@ -12,10 +12,11 @@ source:
     - patches/win.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   script:
     - export ZSTD_EXTERNAL=1  # [not win]
     - set ZSTD_EXTERNAL=1  # [win]
+    - set PKG_CONFIG_PATH=%LIBRARY_LIB%\pkgconfig  # [win]
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
